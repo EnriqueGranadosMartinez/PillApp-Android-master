@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_meeting_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:elevation="4dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".views.home.fragments.meetings.CreateMeetingFragment">
+
+    <TextView
+        android:id="@+id/nombreCitaTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:text="Nombre de la cita"
+        android:textColor="@color/primario_TextoColor"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="87dp" />
+
+    <EditText
+        android:id="@+id/nombreCitaET"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:ems="20"
+        android:hint="¿De qué e la cita?"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/secundario_color2"
+        android:textColorHint="@color/primario_marca"
+        android:textSize="20dp"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreCitaTV" />
+
+    <TextView
+        android:id="@+id/fechaHoraTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Fecha y hora"
+        android:textColor="@color/primario_TextoColor"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreCitaET" />
+
+    <EditText
+        android:id="@+id/fechaET"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:ems="20"
+        android:hint="Introduce fecha"
+        android:inputType="date"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/secundario_color2"
+        android:textColorHint="@color/primario_marca"
+        android:textSize="20dp"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaHoraTV" />
+
+    <EditText
+        android:id="@+id/horaET"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="288dp"
+        android:background="@null"
+        android:ems="20"
+        android:hint="Introduce hora"
+        android:inputType="datetime"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/secundario_color2"
+        android:textColorHint="@color/primario_marca"
+        android:textSize="20dp"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toBottomOf="@+id/createMeetingBT"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/createMeetingBT"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/name_plate_round"
+        android:text="Crear"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaET" />
+
+    <Button
+        android:id="@+id/cancelMeetingBT"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/name_plate_round"
+        android:onClick="backToDetailPatientMeeting"
+        android:text="Cancelar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createMeetingBT" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

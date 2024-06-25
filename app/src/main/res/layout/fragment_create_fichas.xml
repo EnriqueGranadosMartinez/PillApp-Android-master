@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/create_fichas_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".views.home.fragments.patients.CreatePatientFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:elevation="4dp"
+        android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/nombreTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:text="Nombre completo"
+        android:textColor="@color/primario_TextoColor"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nombreET"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:ems="20"
+        android:hint="Nombre y apellidos"
+        android:text=""
+        android:textSize="20dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/secundario_color2"
+        android:textColorHint="@color/primario_marca"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreTV" />
+
+
+    <TextView
+        android:id="@+id/pesoTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Peso(Kg)"
+        android:textColor="@color/primario_TextoColor"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreET" />
+
+    <EditText
+        android:id="@+id/pesoET"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:ems="20"
+        android:hint="Introduce el número"
+        android:text=""
+        android:textSize="20dp"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textColor="@color/secundario_color2"
+        android:textColorHint="@color/primario_marca"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pesoTV" />
+
+    <TextView
+        android:id="@+id/notasTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Notas"
+        android:textColor="@color/primario_TextoColor"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pesoET" />
+
+    <EditText
+        android:id="@+id/notasET"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:ems="20"
+        android:hint="Intolerancias, alergias..."
+        android:text=""
+        android:textSize="20dp"
+        android:inputType="text"
+        android:maxLines="3"
+        android:textColor="@color/secundario_color2"
+        android:textColorHint="@color/primario_marca"
+        app:errorEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notasTV" />
+
+    <Button
+        android:id="@+id/crearPatientBT"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/name_plate_round"
+        android:text="Crear"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/cancelarPatientBT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notasET" />
+
+    <Button
+        android:id="@+id/cancelarPatientBT"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/name_plate_round"
+        android:onClick="backToFicha"
+        android:text="Cancelar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crearPatientBT" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

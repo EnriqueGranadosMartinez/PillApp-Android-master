@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/crearFichasBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_button"
+        android:clickable="true"
+        android:visibility="visible"
+        app:elevation="20dp"
+        app:fabCustomSize="75dp"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toBottomOf="@+id/fichas_layout"
+        app:layout_constraintEnd_toEndOf="@+id/fichas_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fichas_layout"
+        app:layout_constraintVertical_bias="0.8"
+        app:maxImageSize="64dp"
+        app:srcCompat="@drawable/add_floating" />
+
+    <RelativeLayout
+        android:id="@+id/fichas_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:colorBackground"
+        android:elevation="3dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".views.home.fragments.patients.AllPatientsFragment">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RVFichas"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="?android:colorBackground"
+            android:foregroundGravity="center_horizontal"
+            android:padding="16dp"
+            tools:itemCount="6"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="40dp"
+            tools:listitem="@layout/fragment_rv_patient_item">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <!--    <Button
+            android:id="@+id/crearFichasBT"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/RVFichas"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/name_plate_round"
+            android:onClick="goToCreateFicha"
+            android:text="+"
+            android:textAlignment="center" />-->
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
