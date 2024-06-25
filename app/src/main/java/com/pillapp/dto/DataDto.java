@@ -2,6 +2,7 @@ package com.pillapp.dto;
 
 public class DataDto {
     public int id;
+
     public String fullName;
     public String notes;
     public int kg;
